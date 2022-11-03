@@ -1,0 +1,36 @@
+{
+  "generalConfiguration.sortOnBeforeSave": true,
+  "generalConfiguration.sortImportsInDirectory": false,
+  "importStringConfiguration.tabSize": 2,
+  "importStringConfiguration.hasSemicolon": true,
+  "importStringConfiguration.quoteMark": "single",
+  "sortConfiguration.removeUnusedImports": true,
+  "sortConfiguration.removeUnusedDefaultImports": true,
+  "sortConfiguration.customOrderingRules.rules": [
+    {
+      "type": "importMember",
+      "regex": "^$",
+      "orderLevel": 60,
+      "disableSort": true
+    },
+    {
+      "regex": "^(components|constants|data|utils|styles)",
+      "orderLevel": 40
+    },
+    {
+      "regex": "^(ui|icons)",
+      "orderLevel": 30
+    },
+    {
+      "regex": "^[@]",
+      "orderLevel": 10
+    },
+    {
+      "regex": "^[.]",
+      "orderLevel": 50
+    }
+  ],
+  "importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+  "importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 100,
+  "importStringConfiguration.trailingComma": "multiLine"
+}

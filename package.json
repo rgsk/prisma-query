@@ -1,0 +1,42 @@
+{
+  "name": "prisma-query",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_PATH=dist node dist/server.js",
+    "dev": "NODE_PATH=dist nodemon dist/server.js",
+    "watch": "tsc -w",
+    "build": "tsc",
+    "kill:process": "kill -9 $(lsof -t -i:8000)",
+    "init:prisma": "prisma generate",
+    "studio": "prisma studio",
+    "seeders": "node dist/seeds/rootSeed.js",
+    "migrate": "prisma migrate deploy",
+    "migrate:dev": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "migrate:reset": "prisma migrate reset",
+    "migrate:force-reset": "prisma migrate reset --force",
+    "test": "jest",
+    "format": "prettier --write \"**/*.{ts,md}\""
+  },
+  "dependencies": {
+    "@prisma/client": "^4.5.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/jest": "^29.2.1",
+    "@types/node": "^18.11.9",
+    "jest": "^29.2.2",
+    "jest-mock-extended": "^3.0.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "prisma": "^4.5.0",
+    "supertest": "^6.3.1",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
+  }
+}
