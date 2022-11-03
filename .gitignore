@@ -1,8 +1,9 @@
 /node_modules
 /dist
+/dist-test
 
 .env
 
 yarn-error.log*
 
-.parcel-cache
+.parcel-cache 
