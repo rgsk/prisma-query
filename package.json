@@ -1,6 +1,6 @@
 {
   "name": "prisma-query",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "transforms rest query params to prisma model args",
   "source": "src/index.ts",
   "main": "dist/main.js",
