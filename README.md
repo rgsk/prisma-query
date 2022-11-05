@@ -78,7 +78,7 @@ Second ->
 
 we can define queryModifier for the model and pass it as second argument of processFindAllQuery or processFindOneQuery
 
-NOTE: this will work only for first level, for filters in nested models wrapping with num() and bool() are necessary
+NOTE: this will work only for first level, for filters in nested models wrapping with num() and bool() is necessary
 
 ```typescript
 import { processFindAllQuery, QueryModifier } from 'prisma-query';
@@ -233,7 +233,7 @@ const routeToFindManyArgs = {
       booleanValues: ['vip'],
     };
   */
-  // so need of writing fans_gt=num(21000)
+  // so no need of writing fans_gt=num(21000)
   '/guests?eventId=1&fans_gt=21000': {
     where: { eventId: 1, fans: { gt: 21000 } },
   },

@@ -98,6 +98,13 @@ describe('overall', () => {
     },
 
     // fans is treated as number already because of guestQueryModifier
+    /*
+      const guestQueryModifier: QueryModifier<Guest> = {
+        numericValues: ['id', 'fans', 'eventId', 'eventSignupId'],
+        booleanValues: ['vip'],
+      };
+    */
+    // so no need of writing fans_gt=num(21000)
     '/guests?eventId=1&fans_gt=21000': {
       where: { eventId: 1, fans: { gt: 21000 } },
     },
