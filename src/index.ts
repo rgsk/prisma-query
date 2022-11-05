@@ -3,4 +3,7 @@ export {
   processFindOneQuery,
 } from 'utils/processQueryUtils';
 
-export { QueryModifier } from 'utils/queryModifiers';
+export type QueryModifier<T> = {
+  numericValues?: (keyof T)[] | undefined;
+  booleanValues?: (keyof T)[] | undefined;
+};
