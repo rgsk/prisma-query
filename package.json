@@ -7,6 +7,21 @@
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
   "license": "MIT",
+  "keywords": [
+    "prisma",
+    "json-server",
+    "rest-api",
+    "url",
+    "parser",
+    "query",
+    "builder"
+  ],
+  "author": "Rahul Gupta <rahulguptasde@gmail.com> (https://www.skartner.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgsk/prisma-query.git"
+  },
+  "homepage": "https://github.com/rgsk/prisma-query#readme",
   "scripts": {
     "start": "NODE_PATH=dist-test node dist-test/server.js",
     "dev": "NODE_PATH=dist-test nodemon dist-test/server.js",

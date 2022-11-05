@@ -2,6 +2,14 @@
 
 convert query params to prisma args
 
+## Rest Api Format
+
+REST API should based on JSON Server Project.
+
+query params provided via rest api need to be compatible with the REST rules and methods of the JSON Server.
+
+For more info visit json-server npm package [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
+
 ## Usage
 
 ### processFindAllQuery
