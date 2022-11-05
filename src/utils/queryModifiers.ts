@@ -1,4 +1,4 @@
-import { QueryModifier } from 'index';
+import { QueryModifier } from 'types/generalTypes';
 
 /**
  * Model Event

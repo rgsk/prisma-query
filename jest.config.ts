@@ -7,7 +7,6 @@ const config: Config.InitialOptions = {
   testPathIgnorePatterns: ['dist', '/node_modules/'],
   coveragePathIgnorePatterns: ['dist', '/node_modules/'],
   clearMocks: true,
-  setupFilesAfterEnv: ['./src/instances/singleton.ts'],
   moduleDirectories: ['node_modules', 'src'],
 };
 export default config;
