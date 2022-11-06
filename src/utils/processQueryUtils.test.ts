@@ -4,7 +4,7 @@ import {
   parseValue,
   processExpandString,
   processFiltering,
-  processFindAllQuery,
+  processFindManyQuery,
   processRelationships,
   regExpForParsingSpecialValues,
   supportNestedKey,
@@ -120,7 +120,7 @@ describe('overall', () => {
       const queryModifier =
         queryModifiers[endpoint as keyof typeof queryModifiers];
       expect(queryModifier).toBeDefined();
-      expect(processFindAllQuery(parsedQuery, queryModifier)).toEqual(value);
+      expect(processFindManyQuery(parsedQuery, queryModifier)).toEqual(value);
     });
   }
 });

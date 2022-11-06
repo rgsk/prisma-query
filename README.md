@@ -12,10 +12,10 @@ For more info visit json-server npm package [https://www.npmjs.com/package/json-
 
 ## Usage
 
-### processFindAllQuery
+### processFindManyQuery
 
 ```typescript
-import { processFindAllQuery } from 'prisma-query';
+import { processFindManyQuery } from 'prisma-query';
 
 const req = {
   query: {
@@ -25,7 +25,7 @@ const req = {
     _limit: '10',
   },
 };
-const args = processFindAllQuery(req.query);
+const args = processFindManyQuery(req.query);
 console.log(args);
 /*
 {
@@ -41,15 +41,15 @@ console.log(args);
 const posts = await prismaClient.posts.findMany(args);
 ```
 
-### processFindOneQuery
+### processFindUniqueQuery
 
 ```typescript
-import { processFindOneQuery } from 'prisma-query';
+import { processFindUniqueQuery } from 'prisma-query';
 const req = {
   query: { _expand: 'comments', 'comments.user.name': 'justin' },
 };
 
-const args = processFindOneQuery(req.query);
+const args = processFindUniqueQuery(req.query);
 
 // JSON.stringify is used for clean output in the console
 console.log(JSON.stringify(args, null, 2));
@@ -84,12 +84,12 @@ in case of boolean, we can wrap the value in bool() function like `?vip=bool(tru
 
 Second ->
 
-we can define queryModifier for the model and pass it as second argument of processFindAllQuery or processFindOneQuery
+we can define queryModifier for the model and pass it as second argument of processFindManyQuery or processFindUniqueQuery
 
 NOTE: this will work only for first level, for filters in nested models wrapping with num() and bool() is necessary
 
 ```typescript
-import { processFindAllQuery, QueryModifier } from 'prisma-query';
+import { processFindManyQuery, QueryModifier } from 'prisma-query';
 /**
  * Model Guest
  *
@@ -120,7 +120,7 @@ const req = {
     'events.attendees_gt': 'num(1000)', // if num() not specified, then {gt: '1000'}
   },
 };
-const args = processFindAllQuery(req.query, guestQueryModifier);
+const args = processFindManyQuery(req.query, guestQueryModifier);
 console.log(JSON.stringify(args, null, 2));
 
 /*

@@ -327,7 +327,7 @@ export type TQueryModifier = {
   numericValues?: string[] | undefined;
   booleanValues?: string[] | undefined;
 };
-export const processFindAllQuery = (
+export const processFindManyQuery = (
   query: any,
   queryModifier?: TQueryModifier
 ) => {
@@ -372,7 +372,7 @@ export const processFindAllQuery = (
   };
   return options;
 };
-export const processFindOneQuery = (query: any) => {
+export const processFindUniqueQuery = (query: any) => {
   const { _embed, _expand, ...nestedFilters } = query as Record<
     string,
     QueryValue

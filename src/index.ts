@@ -1,6 +1,6 @@
 export type { QueryModifier } from 'types/generalTypes';
 
 export {
-  processFindAllQuery,
-  processFindOneQuery,
+  processFindManyQuery,
+  processFindUniqueQuery,
 } from 'utils/processQueryUtils';
